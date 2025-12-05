@@ -1,34 +1,3 @@
-// // backend/src/models/reviewModel.js
-// const pool = require('../db');
-
-
-// module.exports = {
-// async insertReview({ product_id, shop, rating, review_text, customer_name, images }) {
-// const q = `INSERT INTO reviews (product_id, shop, rating, review, images, customer_name) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *`;
-// const values = [product_id, shop, rating, review_text || null, images || null, customer_name || null];
-// const { rows } = await pool.query(q, values);
-// return rows[0];
-// },
-
-
-// async getReviewsByProduct(product_id, limit = 20, offset = 0) {
-// const q = `SELECT id, product_id, shop, rating, review, images, customer_name, created_at FROM reviews WHERE product_id=$1 ORDER BY created_at DESC LIMIT $2 OFFSET $3`;
-// const { rows } = await pool.query(q, [product_id, limit, offset]);
-// return rows;
-// },
-
-
-// async adminList(limit = 200) {
-// const { rows } = await pool.query('SELECT * FROM reviews ORDER BY created_at DESC LIMIT $1', [limit]);
-// return rows;
-// },
-
-
-// async deleteById(id) {
-// await pool.query('DELETE FROM reviews WHERE id=$1', [id]);
-// return true;
-// }
-// };
 
 const pool = require('../db');
 
