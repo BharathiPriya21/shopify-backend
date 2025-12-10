@@ -32,7 +32,7 @@ router.get("/auth/callback", async (req, res) => {
 
         const accessToken = tokenRes.data.access_token;
 
-        // Save to DB (shop + token)
+        
         console.log("Shop installed:", shop, accessToken);
 
         // Redirect to FE
