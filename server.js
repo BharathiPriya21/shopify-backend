@@ -14,13 +14,11 @@ const PORT = process.env.PORT || 4000;
 
 //app.use(cors());
 app.use(cors({
-  origin: [
-    "https://loox-testing-2.myshopify.com",
-    "https://shopify-frontend-henna.vercel.app"
-  ],
+  origin: "*", // allow all origins
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
