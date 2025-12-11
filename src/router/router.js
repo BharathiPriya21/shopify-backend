@@ -6,7 +6,9 @@ const ctrl = require('../controllers/reviewController');
 
 
 // public
-router.post('/review', upload.single('images'), ctrl.addReview); // add review
+//router.post('/review', upload.single('images'), ctrl.addReview); // add review
+router.post('/review', upload.array('images'), ctrl.addReview);
+
 router.get('/:productId', ctrl.getReviews); // get reviews
 
 

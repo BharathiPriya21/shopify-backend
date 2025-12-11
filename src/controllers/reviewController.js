@@ -78,10 +78,12 @@ const pool = require('../db');
 const sql = require('../models/reviewModel');
 const BASE = process.env.BASE_URL || "http://localhost:4000";
 
+
 module.exports = {
 
   async addReview(req, res) {
     try {
+
       const { product_id, rating, review_text, customer_name } = req.body;
 
       if (!product_id || !rating) {
