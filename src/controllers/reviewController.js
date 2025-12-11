@@ -110,8 +110,10 @@ module.exports = {
       return res.status(201).json({ success: true, review });
 
     } catch (err) {
-      console.error(err);
-      return res.status(500).json({ error: "Server error" });
+      console.error("REVIEW INSERT ERROR:", err.message);
+console.error(err.stack);
+return res.status(500).json({ error: err.message });
+
     }
   },
 
