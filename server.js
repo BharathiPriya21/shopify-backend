@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 4000;
 //app.use(cors());
 app.use(cors({
   origin: "*", // allow all origins
-  methods: ["GET", "POST"],
+ methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
